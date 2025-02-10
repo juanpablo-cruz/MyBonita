@@ -35,28 +35,33 @@ function mostrarFraseNo() {
         index++;
     } else {
         document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
-        document.getElementById("boton-no").disabled = true;
-        botonNo.removeEventListener("mouseover", moverBoton);
+        //document.getElementById("boton-no").disabled = true;
+        //botonNo.removeEventListener("mouseover", moverBoton);
+         activarMovimiento();
     }
+}
+
+function activarMovimiento() {
+    botonNo.addEventListener("mouseover", moverBoton); // Ahora sí se moverá cuando pasen el mouse
 }
 
 // Función para mover el botón a una posición aleatoria
 function moverBoton() {
-    if (index < options.length) { // Solo se mueve mientras no haya terminado la lista de frases
-        const maxX = window.innerWidth - botonNo.clientWidth - 20;
-        const maxY = window.innerHeight - botonNo.clientHeight - 20;
+    function moverBoton() {
+    const maxX = window.innerWidth - botonNo.clientWidth - 50;
+    const maxY = window.innerHeight - botonNo.clientHeight - 50;
 
-        const randomX = Math.random() * maxX;
-        const randomY = Math.random() * maxY;
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
 
-        botonNo.style.position = "absolute";
-        botonNo.style.left = `${randomX}px`;
-        botonNo.style.top = `${randomY}px`;
-    }
+    botonNo.style.position = "absolute";
+    botonNo.style.left = `${randomX}px`;
+    botonNo.style.top = `${randomY}px`;
+}
 }
 
 // Agregar el evento para mover el botón cuando pase el mouse por encima
-botonNo.addEventListener("mouseover", moverBoton);
+//botonNo.addEventListener("mouseover", moverBoton);
 
 function mostrarRespuesta() {
     document.getElementById("pregunta").classList.add("oculto");
