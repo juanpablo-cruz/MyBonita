@@ -43,6 +43,16 @@ function mostrarRespuesta() {
     document.getElementById("respuesta-final").classList.remove("oculto");
 }
 
+function enviarWhatsApp() {
+    let numeroWhatsApp = "573107152538"; // Ejemplo: México (521), Colombia (57)
+
+    // Mensaje a enviar
+    let mensaje = encodeURIComponent("¡Digo que sí a la cita de San Valentín! ❤️🎉, cuentame más detalles😊");
+
+    // Abrir WhatsApp con el mensaje
+    window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, "_blank");
+}
+
 // Función para crear un pétalo animado
 function crearPetalo() {
     let petalo = document.createElement("div");
