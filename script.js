@@ -12,6 +12,32 @@ document.getElementById("boton-inicio").addEventListener("click", function() {
     setInterval(crearPetalo, 500);
 });
 
+const options = [
+    'Segura?', 
+    'Segurisima?', 
+    'Estas completamente segura?', 
+    'Ni por un croissant de chocolate?', 
+    'Ni por una carnita de res?', 
+    'No te arrepentiras?', 
+    'Pero si estas segura?', 
+    'En serio no?', 
+    'No me voy hasta un sí', 
+    'No hay manera de que no', 
+    'no hay'
+];
+
+let index = 0;
+
+function mostrarFraseNo() {
+    if (index < options.length) {
+        document.getElementById("mensaje-no").innerText = options[index];
+        index++;
+    } else {
+        document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
+        document.getElementById("boton-no").disabled = true;
+    }
+}
+
 function mostrarRespuesta() {
     document.getElementById("pregunta").classList.add("oculto");
     document.getElementById("respuesta-final").classList.remove("oculto");
