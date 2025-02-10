@@ -28,6 +28,7 @@ const options = [
 
 let index = 0;
 const botonNo = document.getElementById("boton-no");
+let movimientoActivado = false; 
 
 function mostrarFraseNo() {
     if (index < options.length) {
@@ -42,22 +43,23 @@ function mostrarFraseNo() {
 }
 
 function activarMovimiento() {
+    movimientoActivado = true;
     botonNo.addEventListener("mouseover", moverBoton); // Ahora sí se moverá cuando pasen el mouse
 }
 
 // Función para mover el botón a una posición aleatoria
 function moverBoton() {
-    function moverBoton() {
-    const maxX = window.innerWidth - botonNo.clientWidth - 50;
-    const maxY = window.innerHeight - botonNo.clientHeight - 50;
+    if (movimientoActivado) {
+        const maxX = Math.min(800, window.innerWidth) - botonNo.clientWidth - 20;
+        const maxY = Math.min(800, window.innerHeight) - botonNo.clientHeight - 20;
 
-    const randomX = Math.random() * maxX;
-    const randomY = Math.random() * maxY;
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
 
-    botonNo.style.position = "absolute";
-    botonNo.style.left = `${randomX}px`;
-    botonNo.style.top = `${randomY}px`;
-}
+        botonNo.style.position = "absolute";
+        botonNo.style.left = `${randomX}px`;
+        botonNo.style.top = `${randomY}px`;
+    }
 }
 
 // Agregar el evento para mover el botón cuando pase el mouse por encima
