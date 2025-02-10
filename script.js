@@ -35,7 +35,7 @@ function mostrarFraseNo() {
         document.getElementById("mensaje-no").innerText = options[index];
         index++;
     } else {
-        //document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏2";
+        //document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
         document.getElementById("boton-no").disabled = true;
         //botonNo.removeEventListener("mouseover", moverBoton);
          activarMovimiento();
@@ -52,8 +52,8 @@ function activarMovimiento() {
 // Función para mover el botón a una posición aleatoria
 function moverBoton() {
     if (movimientoActivado) {
-        const maxX = Math.min(800, window.innerWidth) - botonNo.clientWidth - 20;
-        const maxY = Math.min(800, window.innerHeight) - botonNo.clientHeight - 20;
+        const maxX = Math.min(1000, window.innerWidth) - botonNo.clientWidth - 20;
+        const maxY = Math.min(1000, window.innerHeight) - botonNo.clientHeight - 20;
 
         const randomX = Math.random() * maxX;
         const randomY = Math.random() * maxY;
@@ -61,7 +61,7 @@ function moverBoton() {
         botonNo.style.position = "absolute";
         botonNo.style.left = `${randomX}px`;
         botonNo.style.top = `${randomY}px`;
-        document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏2";
+        document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
     }
 }
 
