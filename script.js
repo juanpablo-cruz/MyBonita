@@ -35,7 +35,7 @@ function mostrarFraseNo() {
         index++;
     } else {
         document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
-        //document.getElementById("boton-no").disabled = true;
+        document.getElementById("boton-no").disabled = true;
         //botonNo.removeEventListener("mouseover", moverBoton);
          activarMovimiento();
     }
