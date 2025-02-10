@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +14,13 @@
 
         <div id="pregunta" class="oculto">
             <h2>¿Quieres ser mi cita de San Valentín?, para ir a cenar bien rico este viernes 💖</h2>
+            <h3 id="mensaje-no"></h3> <!-- Aquí aparecerán las frases -->
             <button class="respuesta" onclick="mostrarRespuesta()">Sí</button>
-            <button class="respuesta" onclick="mostrarRespuesta()">¡Claro que sí!</button>
+            <button id="boton-no" class="respuesta" onclick="mostrarFraseNo()">No</button> 
         </div>
 
         <div id="respuesta-final" class="oculto">
-            <h2 class="fade-in mensaje-final">¡Siempre supe que dirías que si 🤭🤭jeje! 💕</h2>
+            <h2 class="fade-in mensaje-final">¡Siempre supe que dirías que sí 🤭🤭jeje! 💕</h2>
             <p class="fade-in">Gracias por estar en mi vida mi corazón, me llenas de felicidad, me fascinas y este va a ser el primero de muchos💘</p>
         </div>
     </div>
@@ -27,4 +28,5 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
