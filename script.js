@@ -31,11 +31,11 @@ const botonNo = document.getElementById("boton-no");
 let movimientoActivado = false; 
 
 function mostrarFraseNo() {
-    if (index <= options.length) {
+    if (index < options.length) {
         document.getElementById("mensaje-no").innerText = options[index];
         index++;
     } else {
-        document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
+        //document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏2";
         document.getElementById("boton-no").disabled = true;
         //botonNo.removeEventListener("mouseover", moverBoton);
          activarMovimiento();
@@ -46,6 +46,7 @@ function mostrarFraseNo() {
 function activarMovimiento() {
     movimientoActivado = true;
     botonNo.addEventListener("mouseover", moverBoton); // Ahora sí se moverá cuando pasen el mouse
+    document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
 }
 
 // Función para mover el botón a una posición aleatoria
