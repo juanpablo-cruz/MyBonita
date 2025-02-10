@@ -46,7 +46,7 @@ function mostrarFraseNo() {
 function activarMovimiento() {
     movimientoActivado = true;
     botonNo.addEventListener("mouseover", moverBoton); // Ahora sí se moverá cuando pasen el mouse
-    //document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
+    document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
 }
 
 // Función para mover el botón a una posición aleatoria
@@ -61,7 +61,7 @@ function moverBoton() {
         botonNo.style.position = "absolute";
         botonNo.style.left = `${randomX}px`;
         botonNo.style.top = `${randomY}px`;
-        document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
+        //document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
     }
 }
 
