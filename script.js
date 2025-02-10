@@ -31,14 +31,15 @@ const botonNo = document.getElementById("boton-no");
 let movimientoActivado = false; 
 
 function mostrarFraseNo() {
-    if (index < options.length) {
+    if (index <= options.length) {
         document.getElementById("mensaje-no").innerText = options[index];
         index++;
     } else {
-        document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏1";
+        document.getElementById("boton-no").innerText = "Ya no puedes decir que no 😏";
         document.getElementById("boton-no").disabled = true;
         //botonNo.removeEventListener("mouseover", moverBoton);
          activarMovimiento();
+        document.getElementById("mensaje-no").classList.add("oculto");
     }
 }
 
