@@ -77,7 +77,7 @@ function enviarWhatsApp() {
     let numeroWhatsApp = "573107152538"; // Ejemplo: México (521), Colombia (57)
 
     // Mensaje a enviar
-    let mensaje = encodeURIComponent("¡Digo que sí a la cita de San Valentín! ❤️🎉, cuentame más detalles😊");
+    let mensaje = encodeURIComponent("¡Sí, vamos por ese helado! ❤️🎉, cuentame más detalles😊");
 
     // Abrir WhatsApp con el mensaje
     window.open(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`, "_blank");
